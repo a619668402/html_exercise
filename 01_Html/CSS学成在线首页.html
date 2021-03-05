@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #Efefef;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .clearfix:after { /*伪元素是行内元素 正常浏览器清除浮动方法*/
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1; /*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+        }
+
+        .nav {
+            height: 80px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav .logo {
+            height: 80px;
+            width: 195px;
+            background-image: url("../img/logo.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            float: left;
+        }
+
+        .nav .menu {
+            float: left;
+            margin-left: 0px;
+            padding: 20px;
+            height: 40px;
+        }
+
+        .nav .menu a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 5px;
+            font-family: "Microsoft Sans Serif";
+        }
+
+        .nav .menu a:hover {
+            color: #00b4ff;
+            border-bottom: 2px solid #00b4ff;
+        }
+
+        .nav .search {
+            float: right;
+            height: 80px;
+            width: 340px;
+        }
+
+        .nav .search input {
+            margin-top: 20px;
+            width: 270px;
+            height: 38px;
+            padding-left: 10px;
+            float: left;
+            border: 1px solid #00b4ff;
+            outline: none;
+        }
+
+        .nav .search .btn {
+            width: 50px;
+            height: 40px;
+            margin-top: 20px;
+            float: left;
+            background-image: url("../img/fa-search.png");
+        }
+
+        .nav .profile {
+            float: right;
+            height: 80px;
+            width: 240px;
+        }
+
+        .nav .profile a {
+            float: left;
+            height: 80px;
+            margin-left: 10px;
+            font-size: 14px;
+            line-height: 80px;
+            display: inline-block;
+        }
+
+        .nav .profile > div {
+            float: right;
+        }
+
+        .nav .profile img {
+            height: 30px;
+            width: 30px;
+            margin-top: 25px;
+            float: left;
+        }
+
+        .nav .profile span {
+            margin-left: 10px;
+            height: 80px;
+            line-height: 80px;
+            float: left;
+        }
+
+        .header {
+            height: 420px;
+            background-image: url("../img/banner2.png");
+            background-position: center center;
+            margin: auto;
+        }
+
+        .header > div {
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+        }
+
+        .header .left {
+            float: left;
+            width: 220px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .header .left ul {
+            list-style: none;
+            margin-top: 3px;
+        }
+
+        .header .left a {
+            display: block;
+            color: white;
+            height: 46px;
+            line-height: 46px;
+            padding-left: 20px;
+        }
+
+        .header .left a > span {
+            display: inline-block;
+            float: left;
+        }
+
+        .header .left .arrow {
+            float: right;
+            margin-right: 10px;
+        }
+
+        .header .left a:hover {
+            color: #00b4ff;
+        }
+
+        .header .right {
+            float: right;
+            height: 300px;
+            width: 230px;
+            margin-top: 60px;
+            background: white;
+        }
+
+        .header .right h3 {
+            height: 45px;
+            font-size: 18px;
+            line-height: 45px;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 180, 255, 0.4);
+        }
+
+        .header .right > div {
+            height: 60px;
+            border-bottom: 1px solid #efefef;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .header .right h4 {
+            color: #a8a2a2;
+            font-size: 16px;
+            padding-top: 10px;
+        }
+
+        .header .right p {
+            color: #c6bdbd;
+            font-size: 13px;
+        }
+
+        .header .right .btn {
+            height: 38px;
+            line-height: 38px;
+            border: 1px solid #00b4ff;
+            text-align: center;
+            margin-top: 11px;
+            color: #00b4ff;
+        }
+
+        .recommend {
+            width: 1200px;
+            height: 60px;
+            margin: 10px auto;
+            font-size: 16px;
+            box-shadow: 1px 1px 1px 1px #ccc;
+            border-radius: 4px;
+        }
+
+        .recommend ul {
+            display: inline-block;
+            margin-left: 20px;
+            float: left;
+        }
+
+        .recommend li {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 0 20px;
+            border-left: 1px solid #a8a2a2;
+        }
+
+        .recommend span {
+            float: left;
+            line-height: 60px;
+            color: #00b4ff;
+        }
+
+        .recommend .recommend_left {
+            margin-left: 20px;
+        }
+
+        .recommend .recommend_right {
+            float: right;
+            margin-right: 20px;
+        }
+
+        .center {
+            width: 1200px;
+            margin: 15px auto;
+        }
+
+        .center_header {
+            height: 50px;
+            font-family: MicrosoftYaHei;
+        }
+
+        .center_header_left {
+            float: left;
+            margin-top: 15px;
+            line-height: 20px;
+            color: #494949;
+            font-size: 20px;
+        }
+
+        .center_header_right {
+            float: right;
+            margin-top: 19px;
+            line-height: 12px;
+            font-size: 12px;
+            color: #a5a5a5;
+        }
+
+        .center_content {
+
+        }
+
+        .center_content li {
+            float: left;
+            width: 230px;
+            height: 270px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: white;
+        }
+
+        .center_content li img {
+            height: 155px;
+            width: 230px;
+        }
+
+        .center_content li h4 {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: #050505;
+            padding: 15px 18px;
+        }
+
+        .center_content li span {
+            font-size: 12px;
+            color: #606060;
+        }
+
+        .center_content .center_content_stress {
+            color: #ff7c2d;
+        }
+
+        .center_content_bottom {
+            padding: 0px 18px;
+        }
+
+        .footer {
+            height: 273px;
+            background-color: white;
+        }
+
+        .footer_content {
+            width: 1200px;
+            margin: auto;
+            padding-top: 33px;
+        }
+
+        .footer_left {
+            float: left;
+            width: 430px;
+            margin-left: 15px;
+        }
+
+        .footer_left img {
+            margin-bottom: 10px;
+        }
+        
+        .footer_left p {
+            margin-top: 6px;
+            font-family: SimSun;
+            line-height: 18px;
+            color: #666666;
+            font-size: 12px;
+        }
+
+        .footer_left_btn {
+            margin-top: 15px;
+            width: 120px;
+            height: 36px;
+            border: 1px solid #00a4ff;
+            color: #00a4ff;
+            text-align: center;
+            line-height: 36px;
+        }
+
+        .footer-right {
+            float: right;
+            width: 522px;
+            height: 200px;
+            margin-right: 20px;
+        }
+
+        .footer_right-left, .footer_right_center, .footer_right_right {
+            float: left;
+            width: 160px;
+            margin-left: 10px;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #333333;
+        }
+
+        .footer-right dd {
+            padding: 3px 0;
+        }
+
+        .footer-right dt {
+            font-size: 16px;
+            padding-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div class="logo"></div>
+    <div class="menu">
+        <a href="#">首页</a>
+        <a href="#">课程</a>
+        <a href="#">职业规划</a>
+    </div>
+    <div class="profile">
+        <a href="#">个人中心</a>
+        <div>
+            <img src="../img/user.png"/>
+            <span>Version</span>
+        </div>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="请输入"/>
+        <div class="btn"></div>
+    </div>
+</div>
+<div class="header">
+    <div>
+        <div class="left">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span>前端开发</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>后端开发</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>移动开发</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>商业预测</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>云计算&大数据</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>运维&测试</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>UI设计</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>产品</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span>前端开发</span>
+                        <span class="arrow">&gt</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <h3>我的课程表</h3>
+            <div>
+                <h4>继续学习&nbsp程序语言设计</h4>
+                <p>正在学习-使用对象</p>
+            </div>
+            <div>
+                <h4>继续学习&nbsp程序语言设计</h4>
+                <p>正在学习-使用对象</p>
+            </div>
+            <div>
+                <h4>继续学习&nbsp程序语言设计</h4>
+                <p>正在学习-使用对象</p>
+            </div>
+            <div>
+                <div class="btn">全部课程</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="recommend">
+    <span class="recommend_left">精品推荐</span>
+    <ul>
+        <li>JQuery</li>
+        <li>Spark</li>
+        <li>MySql</li>
+        <li>JavaWeb</li>
+        <li>MySql</li>
+        <li>JavaWeb</li>
+    </ul>
+    <span class="recommend_right">修改兴趣</span>
+</div>
+<div class="center">
+    <div class="center_header">
+        <span class="center_header_left">
+            精品课程
+        </span>
+        <span class="center_header_right">
+            查看全部
+        </span>
+    </div>
+    <div class="center_content clearfix">
+        <ul>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="../img/pic.png"/>
+                    <h4>Think PHP 5.0 博客系统实战项目演练 </h4>
+                    <div class="center_content_bottom">
+                        <span class="center_content_stress">高级</span>
+                        <span> • </span>
+                        <span>1125人在学习</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer_content">
+        <div class="footer_left">
+            <img src="../img/logo.png"/>
+            <p>
+                学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。
+            </p>
+            <p>
+                © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号
+            </p>
+            <div class="footer_left_btn">
+                下载APP
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="footer_right-left">
+                <dl>
+                    <dt>关于学成网</dt>
+                    <dd>关于</dd>
+                    <dd>管理团队</dd>
+                    <dd>工作机会</dd>
+                    <dd>客户服务</dd>
+                    <dd>帮助</dd>
+                </dl>
+            </div>
+            <div class="footer_right_center">
+                <dl>
+                    <dt>新手指南</dt>
+                    <dd>如何注册</dd>
+                    <dd>如何选课</dd>
+                    <dd>如何拿到毕业证</dd>
+                    <dd>学分是什么</dd>
+                    <dd>考试未通过怎么办</dd>
+                </dl>
+            </div>
+            <div class="footer_right_right">
+                <dl>
+                    <dt>合作伙伴</dt>
+                    <dd>合作机构</dd>
+                    <dd>合作导师</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

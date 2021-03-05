@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+
+        dt:before {
+            content: '/';
+            color: red;
+            margin: 1em;
+        }
+
+        dt:after {
+            content: '/';
+            color: red;
+            margin: 0 1em;
+        }
+    </style>
+</head>
+<body>
+    <!--<div class="red">A</div>-->
+    <!--<div class="green">B</div>-->
+    <!--<div class="red">C</div>-->
+
+    <dl>
+        <dt>测试</dt>
+        <dd>
+            测试
+        </dd>
+    </dl>
+</body>
+</html>
