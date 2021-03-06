@@ -324,23 +324,21 @@ img {
 .banner .bottom {
     margin-top: 10px;
     height: 160px;
-    background-color: #ebebeb;
-    position: relative;
 }
 
 .bottom div:first-child {
     float: left;
     width: 206px;
-    height: 100%;
+    height: 160px;
     background-color: #5c5251;
     text-align: center;
 }
 
-.bottom div:first-child img {
+.banner .bottom div:first-child img {
     margin-top: 35px;
 }
 
-.bottom div:first-child span {
+.banner .bottom div:first-child span {
     display: block;
     margin-top: 10px;
     color: #fff;
@@ -348,22 +346,297 @@ img {
 }
 
 .banner .bottom ul {
+    float: left;
     width: 994px;
-    height: 100%;
-    padding: 10px 0 10px 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+    height: 160px;
 }
 
 .banner .bottom li {
-    float: right;
-    width: 24%;
-    height: 100%;
+    float: left;
+    width: 25%;
+    height: 160px;
     border-right: 1px solid #dddddd;
     text-align: center;
 }
 
 .banner .bottom li img {
-    margin-top: 15px;
+    height: 160px;
+    width: 100%;
+}
+
+.gesture {
+    height: 280px;
+}
+
+.gesture .title {
+    height: 50px;
+    line-height: 50px;
+}
+
+.gesture .title span {
+    float: left;
+    font-size: 18px;
+    color: #333;
+}
+
+.gesture .title a {
+    float: right;
+    font-size: 12px;
+    color: #666;
+}
+.gesture .item ul {
+    border: 1px solid #efefef;
+    height: 230px;
+}
+
+.gesture .item li {
+    float: left;
+    width: 199px;
+    height: 100%;
+}
+
+.gesture .item li img {
+    display: block;
+    margin: auto;
+    height: 140px;
+}
+
+.gesture .item li div {
+    border-left: 1px solid #efefef;
+}
+
+.gesture .item li div:first-child {
+    border-left: 0px;
+}
+
+.gesture .item li p {
+    font-size: 12px;
+    color: #666;
+    margin: 5px 20px 0px 25px;
+}
+
+.gesture .item em {
+    font-style: normal;
+    font-size: 14px;
+    color: #df3033;
+    margin-left: 25px;
+}
+
+.gesture .item span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #df3033;
+}
+
+.interesting {
+    margin-top: 10px;
+    height: 434px;
+}
+
+.interesting .title {
+    line-height: 28px;
+    height: 28px;
+    font-size: 18px;
+    color: #333;
+}
+
+.interesting .left {
+    float: left;
+    width: 404px;
+    height: 405px;
+}
+
+.interesting .center {
+    float: left;
+    width: 625px;
+    height: 405px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+.interesting .goods {
+    width: 207px;
+    float: left;
+}
+
+.interesting .goods h4 {
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 5px;
+    border-bottom: 1px solid #efefef;
+}
+
+.interesting .goods img {
+    width: 100%;
+}
+
+.interesting .brands {
+    float: left;
+    width: 418px;
+    height: 405px;
+    background-color: #f7f7f7;
+}
+
+.interesting .brands h4 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #efefef;
+}
+
+.interesting .right {
+    float: left;
+    width: 171px;
+    height: 405px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+}
+
+.interesting ul li {
+    float: left;
+    border-top: 1px dotted #efefef;
+    border-left: 1px dotted #efefef;
+    width: 81px;
+    height: 57px;
+    padding-top: 10px;
+}
+
+.interesting ul li:nth-child(2n+1) {
+    border-left: 0px;
+}
+
+.interesting ul li:nth-child(-n+2) {
+    border-top: 0px;
+}
+
+.interesting li img {
+    width: 81px;
+    margin: auto;
+}
+
+.floor {
+    height: 480px;
+    margin-top: 10px;
+}
+
+.floor .title {
+    height: 34px;
+}
+
+.floor span {
+    float: left;
+    line-height: 34px;
+    color: #c81623;
+    font-size: 18px;
+}
+
+.floor .title ul {
+    float: right;
+    padding: 9px 0px;
+}
+
+.floor .title ul li {
+    float: left;
+    line-height: 16px;
+    padding: 0 15px;
+    border-left: 1px solid #999;
+}
+
+.floor .title ul li:first-child {
+    border-left: 0px;
+}
+
+.floor .title ul li a {
+    font-size: 12px;
+    color: #999999;
+}
+
+.floor .title ul li a:hover {
+    color: #c81623;
+}
+
+.floor .center {
+    height: 360px;
+}
+
+.floor .floor1 {
+    float: left;
+    width: 209px;
+    height: 100%;
+}
+
+.floor .floor1 ul {
+    height: 120px;
+    padding: 10px;
+}
+
+.floor .floor1 li {
+    float: left;
+    width: 94px;
+    height: 30px;
+    text-align: center;
+}
+
+.floor .floor1 li a {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    width: 80px;
+    border-bottom: 1px solid #efefef;
+}
+
+.floor .floor1 img {
+    width: 187px;
+    height: 227px;
+    margin-left: 18px;
+}
+
+.floor .floor2 img {
+    float: left;
+    width: 329px;
+    height: 100%;
+}
+
+.floor .floor3 {
+    float: left;
+    width: 218px;
+    height: 100%;
+}
+
+.floor .floor3 img {
+    height: 50%;
+}
+
+.floor .floor4 img {
+    float: left;
+    width: 221px;
+    height: 100%;
+}
+
+.floor .floor5 {
+    float: left;
+    width: 220px;
+    height: 100%;
+}
+
+.floor .floor5 img {
+    height: 50%;
+}
+
+.floor .footer {
+    margin-top: 20px;
+    height: 57px;
+    background: #f7f7f7;
+}
+
+.floor .footer li {
+    float: left;
+    padding:0 10px;
+    height: 37px;
+    margin-top: 10px;
+    border-left: 1px solid #efefef;
 }
