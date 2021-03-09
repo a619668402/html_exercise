@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            perspective: 300px;
+        }
+
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            transition: all .6s;
+
+            transform-style: preserve-3d;
+        }
+
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+
+        .one,
+        .two {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+            line-height: 200px;
+            color: #fff;
+            text-align: center;
+            border-radius: 50%;
+            backface-visibility: hidden;
+        }
+
+        .one {
+            background-color: pink;
+        }
+
+        .two {
+            background-color: purple;
+            transform: rotateY(180deg);
+        }
+
+        .nav {
+            position: relative;
+            width: 200px;
+            height: 50px;
+            margin: auto;
+            border: 1px solid #ccc;
+            transition: all 1s;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            font-size: 20px;
+            line-height: 50px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .nav:hover {
+            transform: rotateX(90deg);
+        }
+
+        .first,
+        .second {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .first {
+            background-color: #fed969;
+            z-index: 1;
+        }
+
+        .second {
+            top: 50%;
+            background-color: #00a4ff;
+            transform: rotateX(-90deg) translateY(-25px);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="one">你好</div>
+    <div class="two">欢迎您</div>
+</div>
+
+<div class="nav">
+    <div class="first">你好</div>
+    <div class="second">欢迎您</div>
+</div>
+</body>
+</html>
