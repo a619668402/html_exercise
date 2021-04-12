@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        div {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: #000;
+        }
+
+        ul {
+            position: absolute;
+            width: 500%;
+            height: 200px;
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+            width: 20%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+
+    <!--<ul>-->
+        <!--&lt;!&ndash;<li style="background-color: red"></li>&ndash;&gt;-->
+        <!--<li style="background-color: #00b4ff"></li>-->
+        <!--<li style="background-color: #ff7b2e"></li>-->
+        <!--<li style="background-color: #fed969"></li>-->
+        <!--<li style="background-color: red"></li>-->
+        <!--<li style="background-color: #00b4ff"></li>-->
+    <!--</ul>-->
+
+    <script>
+        window.addEventListener('load', function () {
+            var div = document.querySelector('div')
+            var startX = 0
+            var startY = 0
+            var moveX = 0
+            var moveY = 0
+            div.addEventListener('touchstart', function (ev) {
+                startX = ev.targetTouches[0].pageX
+                startY = ev.targetTouches[0].pageY
+            })
+            div.addEventListener('touchmove', function (ev) {
+                div.style.left = ev.targetTouches[0].pageX - startX + 'px'
+                div.style.top = ev.targetTouches[0].pageY - startY + 'px'
+                // div.style.left = moveX
+                // div.style.top = moveY
+            })
+            div.addEventListener('touchend', function (ev) {
+                startX = 0
+                startY = 0
+            })
+
+            var ul = document.querySelector('ul')
+            var itemWidth = ul.firstElementChild.offsetWidth
+            var index = 0
+            setInterval(function () {
+                index ++
+                var translateX = -index * itemWidth
+                ul.style.transform = 'translateX(' + translateX + 'px)'
+                ul.style.transition = 'all .5s'
+            }, 2000)
+
+            ul.addEventListener('transitionend', function () {
+                if (index == 4) {
+                    ul.style.transition = 'none'
+                    ul.style.transform = 'translateX(0px)'
+                    index = 0
+                }
+            })
+        })
+    </script>
+</body>
+</html>

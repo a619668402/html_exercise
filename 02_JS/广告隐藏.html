@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            background-color: #00a4ff;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        var element = document.getElementsByTagName('div')[0];
+        element.onclick = function() {
+            this.style.visibility = 'hidden'
+        }
+
+    </script>
+</body>
+</html>

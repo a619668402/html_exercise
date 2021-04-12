@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function Star(uname, age) {
+        this.name = uname
+        this.age = age
+        this.sing = function () {
+            console.log('sing')
+        }
+    }
+
+    Star.prototype.movie = function () {
+        console.log(this.name + '-----' + this.age)
+    }
+    Star.prototype.sex = '男'
+
+    var obj1 = new Star('jack', 20)
+    console.dir(Star)
+    // console.log(obj1.__proto__)
+    // console.log(Star.prototype.__proto__)
+    // console.log(Star.__proto__)
+    // console.log(Star.constructor)
+    // console.log(obj1.constructor)
+    // console.log(obj1.__proto__ === Star.prototype)
+    var obj2 = new Star('marry', 21)
+
+    obj1.movie()
+    obj2.movie()
+
+    console.log(obj1.sex)
+    obj2.sex = '女'
+    console.log(obj1.sex)
+    console.log(obj2.sex)
+    
+</script>
+</body>
+</html>
