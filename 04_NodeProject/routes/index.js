@@ -1,5 +1,6 @@
 const express = require('express')
 const handleDB = require('../db/handleDB')
+require('../utils/filter')
 const router = express.Router()
 
 router.get('/', (req, res) => {
