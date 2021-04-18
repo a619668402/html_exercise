@@ -5,6 +5,6 @@ const app = express()
 
 config(app, express)
 
-app.listen(9090, () => {
+app.listen(8080, () => {
     console.log('OK')
 })

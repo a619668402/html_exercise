@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04f8e87b-3ec4-4e4d-a4b5-327fb79890e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01_Html/CSS动画.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01_Html/http模块.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01_Html/相册2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/a619668402/html_exercise.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1pO5F9CjpkoEZ3jeE5Crxto719e" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="javascript.nodejs.core.library.configured.version" value="15.2.1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fav" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fav" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04f8e87b-3ec4-4e4d-a4b5-327fb79890e5" name="Default Changelist" comment="" />
+      <created>1615041189713</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615041189713</updated>
+      <workItem from="1615041191641" duration="1552000" />
+      <workItem from="1615203973311" duration="7764000" />
+      <workItem from="1615289755013" duration="4836000" />
+      <workItem from="1617193356826" duration="1991000" />
+      <workItem from="1617527081728" duration="26000" />
+      <workItem from="1618226682920" duration="1549000" />
+      <workItem from="1618722508069" duration="337000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="96" key="DiffContextDialog" timestamp="1618722848509">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="137" y="96" key="DiffContextDialog/0.23.1440.840@0.23.1440.840" timestamp="1618722848509" />
+    <state x="222" y="82" key="SettingsEditor" timestamp="1617193477699">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="222" y="82" key="SettingsEditor/0.23.1440.840@0.23.1440.840" timestamp="1617193477699" />
+    <state x="313" y="183" key="Vcs.Push.Dialog.v2" timestamp="1615293991248">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="313" y="183" key="Vcs.Push.Dialog.v2/0.23.1440.840@0.23.1440.840" timestamp="1615293991248" />
+    <state x="504" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615080820118">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="504" y="364" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.840@0.23.1440.840" timestamp="1615080820118" />
+    <state x="391" y="238" key="git4idea.merge.GitPullDialog" timestamp="1618722820505">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="391" y="238" key="git4idea.merge.GitPullDialog/0.23.1440.840@0.23.1440.840" timestamp="1618722820505" />
+    <state x="491" y="339" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1618227021079">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="491" y="339" key="git4idea.remote.GitConfigureRemotesDialog/0.23.1440.840@0.23.1440.840" timestamp="1618227021079" />
+    <state x="378" y="187" width="670" height="676" key="search.everywhere.popup" timestamp="1615207078067">
+      <screen x="0" y="23" width="1440" height="840" />
+    </state>
+    <state x="378" y="187" width="670" height="676" key="search.everywhere.popup/0.23.1440.840@0.23.1440.840" timestamp="1615207078067" />
+  </component>
+</project>

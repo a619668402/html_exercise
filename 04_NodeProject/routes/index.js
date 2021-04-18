@@ -2,8 +2,14 @@ const express = require('express')
 const handleDB = require('../db/handleDB')
 require('../utils/filter')
 const router = express.Router()
+const common = require('../utils/common')
 
 router.get('/', (req, res) => {
+    res.redirect('/index')
+})
+
+router.get('/index', (req, res) => {
+    console.log(common.md5('hello'));
     (async function () {
         // 分类数据
         let categorys = await handleDB(res, 'info_category', 'find', '查询失败')
@@ -17,7 +23,7 @@ router.get('/', (req, res) => {
             result = await handleDB(res, 'info_user', 'find', '查询失败', 'id = ' + userId)
         }
         let data = {
-            user_info: result[0] ? {
+            user_info: result ? {
                 username: result[0].username,
                 avatar_url: result[0].avatar_url,
             } : false,
@@ -26,10 +32,6 @@ router.get('/', (req, res) => {
         }
         res.render('news/index', data)
     })()
-})
-
-router.get('/index', (req, res) => {
-    res.render('news/index')
 })
 
 router.get('/404', (req, res) => {

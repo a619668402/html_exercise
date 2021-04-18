@@ -50,7 +50,6 @@ router.post('/passport/login', (req, res) => {
             return
         }
         let result = await handleDB(res, 'info_user', 'find', '查询失败', 'username = "'+ username +'" and password_hash = "'+ password +'"')
-        console.log(result)
         if (!result[0]) {
             res.send({errmsg: '该用户为注册,登录失败'})
             return

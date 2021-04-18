@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const cookieSession = require('cookie-session')
 // const session = require('express-session');
 
+const common = require('./utils/common')
+
 const indexRouter = require('./routes/index')
 const passportRouter = require('./routes/passport')
 
@@ -38,8 +40,8 @@ let config = (app, express) => {
 // }))
 
     // 注册路由配置
-    app.use(indexRouter)
-    app.use(passportRouter)
+    app.use(common.csrfProtect, indexRouter)
+    app.use(common.csrfProtect, passportRouter)
 }
 
 module.exports = config

@@ -11,6 +11,8 @@
     "express": "^4.17.1",
     "express-art-template": "^1.0.1",
     "express-session": "^1.17.1",
+    "js-base64": "^3.6.0",
+    "md5": "^2.3.0",
     "mysql": "^2.18.1",
     "svg-captcha": "^1.4.0"
   }
