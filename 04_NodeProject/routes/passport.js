@@ -1,6 +1,7 @@
 const express = require('express')
 const Captcha = require('../utils/captcha')
 const handleDB = require('../db/handleDB')
+const common = require('../utils/common')
 const router = express.Router()
 
 router.get('/passport', (req, res) => {
@@ -66,5 +67,16 @@ router.post('/passport/login', (req, res) => {
 router.post('/passport/logout', (req, res) => {
     req.session['user_id'] = null
     res.send('ok')
+})
+
+router.get('/passport/token', (req, res) => {
+    const token = common.createJWT({id: '1', username: 'zhangsan'})
+    res.send({
+        msg: 'success',
+        code: 200,
+        result: {
+            token: token
+        }
+    })
 })
 module.exports = router

@@ -1,6 +1,8 @@
 // 公共工具类
 const Base64 = require('js-base64')
 const md5 = require('md5')
+const jwt = require("jsonwebtoken")
+const keys = require('../keys')
 
 function getRandomString(n) {
     let str = ''
@@ -40,9 +42,17 @@ function md5String(str) {
     return md5(str)
 }
 
+function createJWT(data) {
+    return jwt.sign(data, keys.jwt_salt, {expiresIn: 60 * 60 * 2})
+}
+
+
+
+
 module.exports = {
     csrfProtect,
     encodeBase64,
     decodeBase64,
     md5,
+    createJWT
 }
